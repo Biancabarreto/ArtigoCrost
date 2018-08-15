@@ -6,7 +6,7 @@ NTOTAL<-MAXID-MINID+1
 
 ### defino uma variável nd, numero de 
 ### pontos analisados
-nd <- 10  # variogram for up separation of 10
+nd <- 50  # variogram for up separation of 50
 ### Criando 2 matrices vazias de NTOTAL linhas e nd colunas.
 ### NA : Not Available
 xd1 <- matrix(NA,NTOTAL,nd) 
@@ -90,11 +90,11 @@ for (K in MINID:MAXID)
 	#win.metafile("fig2.wmf")
 	if(K==1)
 	{
-		plot(1:nd,xd1[K,],col="red",main="Variogram",xlim=c(0,10))
+		plot(1:nd,xd1[K,],col="red",pch=16,main="Variogram")
 	}
 	else
 	{
-		points(1:nd,xd1[K,],col="red",pch=16,xlim=c(0,10))
+		points(1:nd,xd1[K,],col="red",pch=16)
 	}
 	points(1:nd,xd2[K,],col="green",pch=16)
 }
