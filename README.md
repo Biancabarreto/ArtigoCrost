@@ -1,0 +1,2 @@
+# ArtigoCrost
+Semivariograma mediana 
