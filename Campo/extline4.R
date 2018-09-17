@@ -25,8 +25,8 @@ for (K in MINID:MAXID)
 	img2 <- read.bmp(path_img2)
 
 	### Mostrar imagenes carregadas
-	image(img1) # to display the image1
-	image(img2) # to display the image2
+	#image(img1) # to display the image1
+	#image(img2) # to display the image2
 
 	### ncol numero de colunas da imagem img1
 	### nrow numero de linhas da imagem img1
@@ -48,7 +48,7 @@ for (K in MINID:MAXID)
 	jpeg(sprintf("%s.out.jpeg", path_img1))
 		### Faz um plot de x1 (media das linhas de x1)
 		#plot(1:ncol,x1,pch=16,cex=0.4,col="red",xlim=c(1,ncol),ylim=c(nrow,1))
-		plot(0:(ncol-1), type='n', main="", xlab="x", ylab="y",xlim=c(0,ncol-1),ylim=c(nrow-1,0))
+		plot(0:(ncol-1), type='n', main="", xlab="", ylab="",xlim=c(0,ncol-1),ylim=c(nrow-1,0),  xaxt='n',yaxt='n')
 		rasterImage(img1/255.0, 0, nrow-1, ncol-1, 0)
 		grid()
 
@@ -58,7 +58,7 @@ for (K in MINID:MAXID)
 	jpeg(sprintf("%s.out.jpeg", path_img2))
 		### Faz um plot de x2 (media das linhas de x2)
 		#plot(1:ncol,x2,pch=16,cex=0.4,col="green",xlim=c(1,ncol),ylim=c(nrow,1))
-		plot(0:(ncol-1), type='n', main="", xlab="x", ylab="y",xlim=c(0,ncol-1),ylim=c(nrow-1,0))
+		plot(0:(ncol-1), type='n', main="", xlab="", ylab="",xlim=c(0,ncol-1),ylim=c(nrow-1,0),  xaxt='n',yaxt='n')
 		rasterImage(img2/255.0, 0, nrow-1, ncol-1, 0)
 		grid()
 
